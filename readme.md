@@ -14,7 +14,7 @@ Run the commands below to achieve this but not on this repository path, do it in
 # Performs a global install of serverless
 npm install -g serverless
 # Creates the template in the specified path
-serverless create --template aws-kotlin-nodejs-gradle --path s3-ffmpeg-kotlin-lab
+serverless create --template aws-kotlin-jvm-gradle --path s3-ffmpeg-kotlin-lab
 ```
 
 With that you have finished the first step and your working folder should look like the current branch of this repository
