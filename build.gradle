@@ -53,6 +53,9 @@ dependencies {
   compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version:'2.8.5'
   compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version:'2.8.5'
   compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version:'2.8.5'
+  compile group: 'net.bramp.ffmpeg', name: 'ffmpeg', version: '0.6.2'
+  compile group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.323'
+
 }
 
 task deploy(type: Exec, dependsOn: 'shadowJar') {

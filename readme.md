@@ -1,26 +1,29 @@
 # Building a Media Converter With AWS Lambda, s3, ffmpeg and Kotlin
 
- This is Step 1 - Initializing the project with a serverless template
+ This is Step 2 - Customising the handler
 
-## Install node.js
+## Deleting uneeded files
 
-Only do this step if you already don't have it installed, I recommend nvm for most new users of node.js because it makes life with node.js a bit easier. Installation can also be done from the node.js website.
+- Delete ApiGatewayResponse.kt, HelloResponse.kt and  Response.kt
+- Replace your Handler.kt with the one in this repository
+- Replace your Serveless.yml with the one in this repository
+- Copy the utils folder from this repo and place it next to the Handler.kt
+- Open S3Operations.kt and fill in your aws credentials, input and output buckets
+- Open Serverless.yml and fill in your input bucket
 
-## Installing Serverless and Initializing the Template
+Note: The credentials used must have read/write access to both the buckets
 
-Run the commands below to achieve this but not on this repository path, do it in another directory. This is because the branches of this repo represent what you should have at the end of each step.
+## Explanation
+
+- All the source code is heavily commented to explain why anything is done the way it is
+- For the Serverless.yml we have defined a deployment bucket, this bucket will be where we store our source code. It is recommended to define this because serveless will otherwise assign a random bucket for this purpose.
+- The deployment bucket is used by aws to provision your container from a cold start. A cold start is the first call of a function after deployment or a function call after a long period of inactvity
+- There are several strategies to warm up containers to reduce the impact of speed on cold start but it highly depeneds on your use case for the functio
+
+With that you have finished the second step and your working folder should look like the current branch of this repository
+
+## Move to Step 3
 
 ```sh
-# Performs a global install of serverless
-npm install -g serverless
-# Creates the template in the specified path
-serverless create --template aws-kotlin-nodejs-gradle --path s3-ffmpeg-kotlin-lab
-```
-
-With that you have finished the first step and your working folder should look like the current branch of this repository
-
-## Move to Step 2
-
-```sh
-git checkout Step-2-Handler-Customisation
+git checkout Step-3-ffmpeg-build
 ```
