@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8776b3-1001-486f-9fb4-8af34228a287" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/serverless/ApiGatewayResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/serverless/Handler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/serverless/Handler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/serverless/HelloResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/serverless/Response.kt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -40,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/serverless/Handler.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-356">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#24#392#0" expanded="true" />
               </folding>
@@ -52,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/serverless/utils/S3Operations.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="46" column="7" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="46" selection-end-column="7" />
+              <caret line="46" column="7" selection-start-line="36" selection-start-column="2" selection-end-line="46" selection-end-column="7" />
               <folding>
                 <element signature="e#60#444#0" expanded="true" />
               </folding>
@@ -706,16 +700,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526454586579</updated>
-      <workItem from="1526454588411" duration="1689000" />
+      <workItem from="1526454588411" duration="1875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1689000" />
+    <option name="totallyTimeSpent" value="1875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="sbt" />
@@ -768,7 +761,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/serverless/utils/S3Operations.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="46" column="7" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="46" selection-end-column="7" />
+          <caret line="46" column="7" selection-start-line="36" selection-start-column="2" selection-end-line="46" selection-end-column="7" />
           <folding>
             <element signature="e#60#444#0" expanded="true" />
           </folding>
@@ -788,7 +781,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/serverless/Handler.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-356">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#24#392#0" expanded="true" />
           </folding>
