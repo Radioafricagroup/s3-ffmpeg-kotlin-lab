@@ -16,9 +16,9 @@ Note: The credentials used must have read/write access to both the buckets
 ## Explanation
 
 - All the source code is heavily commented to explain why anything is done the way it is
-- For the Serverless.yml we have defined a deployment bucket, this bucket will be where we store our source code. It is recommended to define this because serveless will otherwise assign a random bucket for this purpose.
-- The deployment bucket is used by aws to provision your container from a cold start. A cold start is the first call of a function after deployment or a function call after a long period of inactvity
-- There are several strategies to warm up containers to reduce the impact of speed on cold start but it highly depeneds on your use case for the functio
+- For the Serverless.yml we have defined a deployment bucket, this bucket will be where we store our source code. It is recommended to define this because serverless will otherwise assign a random bucket for this purpose.
+- The deployment bucket is used by aws to provision your container from a cold start. A cold start is the first call of a function after deployment or a function call after a long period of inactivity
+- There are several strategies to warm up containers to reduce the impact of speed on cold start but it highly depends on your use case for the function
 
 With that you have finished the second step and your working folder should look like the current branch of this repository
 
