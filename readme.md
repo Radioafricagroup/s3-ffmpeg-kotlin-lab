@@ -1,27 +1,63 @@
 # Building a Media Converter With AWS Lambda, s3, ffmpeg and Kotlin
 
- This is Step 3 - Building ffmpeg binary
+ This is Step 4 - Setting up your credentials and deploying
 
-## Install Docker
+- Follow the instructions here [https://docs.aws.amazon.com/cli/latest/userguide/installing.html](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 
-Install docker from here [https://docs.docker.com/install/](https://docs.docker.com/install/)
+- Create your output bucket if you have not already, no need to make the input bucket or the deployment bucket
 
-## Build process
-
-Opern up your terminal, change directories to your resources folder like so
+- Export your AWS credentials before deploying like so
 
 ```sh
-cd /path/to/lab/src/main/resources
-docker run --rm -it -v $(pwd):/buildir -w /buildir amazonlinux /bin/bash
-curl -L http://bit.ly/ffmpeg-deps | bash
-cp /usr/bin/ffmpeg /buildir/ffmpeg
-cp /usr/bin/ffprobe /buildir/ffprobe
+export AWS_ACCESS_KEY_ID=********************
+export AWS_SECRET_ACCESS_KEY=*************************************
 ```
 
-If the above succeeds thank the heavens and move on, if it takes too long or you face some errors, just take the binaries included in this repo's src/main/resources folder and place them in your src/main/resources folder
+- Unless you plan on using a CI engine or automated deploys, just use an administrative account for simplicity, but the policy that worked for me for this specific deploy is this:
 
-## Move to Step 4
+```json
+{
+    "Version": "",
+    "Statement": [
+        {
+            "Sid": "MyConverter",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetPolicyVersion",
+                "logs:*",
+                "iam:CreateRole",
+                "sns:Unsubscribe",
+                "iam:PutRolePolicy",
+                "xray:PutTraceSegments",
+                "iam:ListAttachedRolePolicies",
+                "sns:Subscribe",
+                "iam:ListRolePolicies",
+                "events:*",
+                "iam:GetRole",
+                "iam:GetPolicy",
+                "cloudformation:*",
+                "cloudwatch:*",
+                "iot:ListPolicies",
+                "iam:GetRolePolicy",
+                "xray:PutTelemetryRecords",
+                "tag:GetResources",
+                "iam:PassRole",
+                "s3:*",
+                "iam:ListRoles",
+                "lambda:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+- Then run this to deploy
 
 ```sh
-git checkout Step-4-aws-credential-setup
+./gradlew deploy
 ```
+
+## Test your converter
+
+- Drop any audio files and see them converted to .mp4 files :)
